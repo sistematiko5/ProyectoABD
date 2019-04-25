@@ -6,6 +6,8 @@
 		<li><a href="/ProyectoABD/vista/listaEventos.php">Razas de perros</a>
 		<li><a href="/ProyectoABD/vista/conocenos.php">Conócenos</a>
 		<li><a href="/ProyectoABD/vista/ayuda.php">Ayuda</a>
+		<li><a href="/ProyectoABD/vista/carrito.php">Carrito</a>
+		<li><a href="/ProyectoABD/vista/comentarios.php">Comentarios</a>
 		<?php
 			if(!$_SESSION['login'])
 				echo '<li style="float:right"><a id="inicio_sesion" href="/ProyectoABD/vista/login.php">Inicia sesión</a>';

@@ -125,6 +125,21 @@ li a:hover {
   border-color: #aaaaaa;
   border-radius: 20px;
 }
+.botton{
+  padding: 2px;
+  border: 0px;
+  width: 100px;
+  background-color: #ffbdbd;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+
+.botton:hover{
+    box-shadow: 0 7px 11px 0 rgba(0,0,0,0.4);
+    background-color: #ff6666;
+
+}
+
 #botonSubmitE{
   padding: 2px;
   width: 100px;

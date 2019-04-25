@@ -3,6 +3,7 @@
 require_once ("../includes/config.php");
 require_once ("../logica/SA_Eventos.php");
 require_once ("../includes/conexion.php");
+
  ?>
 
 <!DOCTYPE html>
@@ -38,12 +39,30 @@ require_once ("../includes/conexion.php");
           echo "Cantidad: ";  echo $value->getCantidad();
           echo '<p> '."Precio: ";  echo $value->getPrecio() ;
           echo '<form action = "listaEventos.php"method = "post">';
-          echo '<p><button type="submit" name = "botton" value = "'. $value->getNombre().'">Añadir</button>';
+          if(!añadida($value->getNombre())){
+          echo '<p><button class = "botton" type="submit" name = "botton" value = "'. $value->getNombre().'">Añadir</button>';
+        }
             echo '</form>';
         echo'</div>';
       }
-    ?>
+?>
+<?php
+        function añadida($nombre){
+        $app = Aplicacion::getSingleton();
+        $conn = $app->conexionBd();
+        $query = "SELECT * FROM anadir WHERE nombre_perro = '".$nombre."' AND id_usuario = '".$_SESSION['nombre']."'";
+        $resultado = mysqli_query($conn,$query);
 
-	</div>
-  <?php require("common/footer.php")?>
+        if(mysqli_num_rows($resultado) == 1){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+
+
+	echo '</div>';
+  require("common/footer.php")
+?>
 </body>
