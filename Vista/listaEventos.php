@@ -38,11 +38,13 @@ require_once ("../includes/conexion.php");
           echo '<p> '. $value->getLocalizacion(). '</p>';
           echo "Cantidad: ";  echo $value->getCantidad();
           echo '<p> '."Precio: ";  echo $value->getPrecio() ;
+          if($_SESSION['login']){
           echo '<form action = "listaEventos.php"method = "post">';
           if(!añadida($value->getNombre())){
           echo '<p><button class = "botton" type="submit" name = "botton" value = "'. $value->getNombre().'">Añadir</button>';
         }
             echo '</form>';
+          }
         echo'</div>';
       }
 ?>

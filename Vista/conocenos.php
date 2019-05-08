@@ -18,9 +18,8 @@
   		<div class="rowC">
         <div class ="descripcion">
   				<p>Esta página ha sido realizada como parte de un proyecto universitario de la Universidad Complutense de Madrid.</p>
-          <p>"Nuestro proyecto se trata de una web para poner en contacto a personas interesadas
-          en el mundo del emprendimiento que estén en la etapa laboral de su vida con startups
-           en cualquier fase que quieran buscar a nuevos integrantes en sus equipos.</p>
+          <p>Nuestro proyecto se trata de una web para poner en contacto a personas interesadas
+          en perros y que no saben muy bien cual elegir. También tenemos un sistema de adopción que aun estamos implementando.</p>
   			</div>
       </div>
 

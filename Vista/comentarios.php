@@ -46,12 +46,12 @@ session_start();
 
 			foreach($value as $document){  /* Follows will be created and deleted from the companies list*/
 			 echo  '<div class="row">';
-				 echo '<div class= "card">';
-					 echo ' <h3 class="bubble"> '. $document["titulo"] .'</h3>';
-					 echo ' <p class="bubble"> '. $document["texto"] .'</p>';
+				 echo '<div class= "conocenosCard">';
+					 echo ' <h3 class="conocenos"> '. $document["titulo"] .'</h3>';
+					 echo ' <p class="conocenos"> '. $document["texto"] .'</p>';
 					 $id = $document["_id"];
 					 echo '<form action="comentarios.php" method="post">';
-						 echo '<button class="" type="submit" name="delete" value="'.$id.'">Delete</button>';
+						 echo '<button class="botonSubmitE" type="submit" name="delete" value="'.$id.'">Delete</button>';
 					 echo '</form>';
 				 echo'</div>';
 			 echo'</div>';
@@ -75,7 +75,7 @@ function test_input($data) {
 		 </form>
 		 <form class="" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			 <h2>Crea un comentario:</h2>
-			 <p>Titulo: <input  class="form" type="text" name="titulo" value=""></p>
+			 <p>Asunto: <input  class="form" type="text" name="titulo" value=""></p>
 			 <p>Texto: <input  class="form" type="text" name="texto" value=""></p>
 			 <input class="" type="submit" name="submit" value="Aceptar">
 			 </form>
